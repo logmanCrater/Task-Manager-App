@@ -1,0 +1,18 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}Approve Status Change{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="my-4">Approve Status Change Request</h1>
+        <p>Task: {{ status_change_request.task.title }}</p>
+        <p>Current Status: {{ status_change_request.current_status }}</p>
+        <p>Requested Status: {{ status_change_request.requested_status }}</p>
+        <form method="post" action="{% url 'approve_status_change' status_change_request.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Approve Status Change</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

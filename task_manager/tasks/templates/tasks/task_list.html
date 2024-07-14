@@ -1,0 +1,21 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}Task List{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="my-4">Task List</h1>
+        <ul class="list-group">
+            {% for task in tasks %}
+                <li class="list-group-item">
+                    <a href="{% url 'task_detail' task.id %}">{{ task.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if user.is_superuser %}
+            <a href="{% url 'task_form' %}" class="btn btn-primary mt-4">Create a new task</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
