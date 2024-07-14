@@ -32,7 +32,7 @@ To set up the project, clone the repository, create a virtual environment, and i
 
 ### Email Configuration
 
-The project is configured to use Gmail for sending password reset emails. Update the email settings in `settings.py` with your Gmail credentials. Use an App Password if two-factor authentication (2FA) is enabled.
+The project is configured to use Gmail for sending password reset emails. Update the email settings in `settings.py` with your Gmail credentials. Use an App Password if two-factor authentication (2FA) is enabled.or else it won't work.To learn how go Setup Instructions Step 7
 
 ## Documentation and Resources
 
