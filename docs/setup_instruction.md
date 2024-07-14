@@ -27,17 +27,25 @@ python -m venv venv
 python -m virtualenv venv
 source venv/bin/activate   
 ```
-# Step 3: Install Dependencies
+
+# Step34: Change directory to django project
+
+To run project we need redirect terminal to task_manager
+```
+cd task_manager
+```
+
+# Step 4: Install Dependencies
 
 Install the required Python packages using `pip`.
 ```
 pip install -r requirements.txt
 ```
-# Step 4: Configure the Database
+# Step 5: Configure the Database
 
 Update the database settings in `settings.py` according to your database setup. For SQLite (default), no changes are needed.
 
-# Step 5: Run Migrations
+# Step 6: Run Migrations
 
 Apply database migrations to set up the database schema.
 ```
@@ -45,7 +53,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-# Step 6: Configure Email Settings
+# Step 7: Configure Email Settings
 
 Update the email settings in `settings.py` to use Gmail for sending password reset emails. Add the following configuration:
 ```
@@ -57,13 +65,13 @@ EMAIL_HOST_USER = 'your_email@gmail.com'
 EMAIL_HOST_PASSWORD = 'your_email_password'  # Use an App Password if 2FA is enabled
 DEFAULT_FROM_EMAIL = 'your_email@gmail.com'
 ```
-# Step 7: Create a Superuser
+# Step 8: Create a Superuser
 
 Create a superuser to access the Django admin interface.
 ```
 python manage.py createsuperuser
 ```
-# Step 8: Run the Development Server
+# Step 9: Run the Development Server
 
 Start the Django development server.
 ```
@@ -83,5 +91,6 @@ To reset a user's password, go to the login page and click the "Forgot Password?
 ### API Documentation
 
 Refer to the [API documentation](api_managment) for details on how to interact with the Task Manager API.
-### Requirments
-Refer to the [`requirements.txt`](../requirements.txt) for details on what this file downloads to your pc when you do [Step 3]()
+### Requirements
+
+See [`requirements.txt`](../task_manager/requirements.txt) for details on which libraries this file downloads to your computer when you perform [Step 4]().
