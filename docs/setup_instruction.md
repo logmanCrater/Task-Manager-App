@@ -28,7 +28,7 @@ python -m virtualenv venv
 source venv/bin/activate   
 ```
 
-# Step34: Change directory to django project
+# Step 3: Change directory to django project
 
 To run project we need redirect terminal to task_manager
 ```
